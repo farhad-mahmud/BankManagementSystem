@@ -96,7 +96,7 @@ class Appli(object):
      self.bd_lbl = Label(self.bottom, text="> Update user Account", bg="#8e9b96", font="helvetica 13 bold")
      self.bd_lbl.place(x=280, y=472)
 
-     #create User
+     #create User  
      self.us= Button(self.bottom, text=" User Administration ", font="helvetica 13 bold", command=usr, width=20)
      self.us.place(x=40, y=540)
      self.us_lbl = Label(self.bottom, text="> Actions Related to Users", bg="#8e9b96", font="helvetica 13 bold")

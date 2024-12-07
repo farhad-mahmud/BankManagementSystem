@@ -4,7 +4,7 @@ import os
 from subprocess import call
 
 def create_acc():
-    call(["python", "create_acc.py"])
+    call(["python", "create_acc.py"])        # calling the create account page and so on....
 def delt_acc():
     call(["python", "delt.py"])
 def balq():
@@ -56,13 +56,13 @@ class Appli(object):
      self.ca= Button(self.bottom, text=" Create Account ", font="helvetica 13 bold", command=create_acc, width=20)
      self.ca.place(x=40, y=50)
      self.ca_lbl = Label(self.bottom, text="> Create new user account", bg="#8e9b96", font="helvetica 13 bold")
-     self.ca_lbl.place(x=280, y=52)
+     self.ca_lbl.place(x=280, y=52) 
 
      #Balance enquiry
-     self.Be= Button(self.bottom, text=" Balance Enquiry ", font="helvetica 13 bold", command=balq, width=20)
-     self.Be.place(x=40, y=120)
-     self.be_lbl = Label(self.bottom, text="> Check Account Balance", bg="#8e9b96", font="helvetica 13 bold")
-     self.be_lbl.place(x=280, y=122)
+     self.Be= Button(self.bottom, text=" Balance Enquiry ", font="helvetica 13 bold", command=balq, width=20)   # button widget 
+     self.Be.place(x=40, y=120)                                      
+     self.be_lbl = Label(self.bottom, text="> Check Account Balance", bg="#8e9b96", font="helvetica 13 bold") 
+     self.be_lbl.place(x=280, y=122)       # self.be_lbl  .. label widget ,displays side text 
 
      #Check Accounnt
      self.Caa= Button(self.bottom, text=" Check Account Details ", font="helvetica 13 bold", command=chk, width=20)
@@ -87,7 +87,7 @@ class Appli(object):
      self.Au.place(x=40, y=410)
      self.bd_lbl = Label(self.bottom, text="> Delete user Account", bg="#8e9b96", font="helvetica 13 bold")
      self.bd_lbl.place(x=280, y=412)
-
+     #account update 
      self.Au= Button(self.bottom, text=" Update Account ", font="helvetica 13 bold", command=upd, width=20)
      self.Au.place(x=40, y=480)
      self.bd_lbl = Label(self.bottom, text="> Update user Account", bg="#8e9b96", font="helvetica 13 bold")

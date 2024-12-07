@@ -19,8 +19,8 @@ class Appli(object):
      def sub():
          user= StringVar()
          passw= StringVar()
-         user= (e_user.get())
-         passw=(e_pass.get())
+         user= (e_user.get())      # to fetch username and pass from entry fields 
+         passw=(e_pass.get())      #
          mode= (i.get())
          if (user == "" or passw == "" ):
              MessageBox.showinfo("Illegal insert", "All Fields are Required")
@@ -28,7 +28,7 @@ class Appli(object):
              if (mode == "1"):
                  if ( user == "admin" and passw == "admin"):
                      MessageBox.showinfo("Sucessful", "Welcome Admin")
-                     call(["python", "mainadmin.py"])
+                     call(["python", "mainadmin.py"])        #entering mainadmin page 
                      quit()
                  else:
                      MessageBox.showinfo("Illegal insert", "Username or Password Is Wrong")
@@ -44,8 +44,8 @@ class Appli(object):
                          pchk=x[1]
                          if (user == uchk and passw == pchk):
                              MessageBox.showinfo("Sucessful", "Welcome Management Staff")
-                             call(["python", "mainmanage.py"])
-                             quit()
+                             call(["python", "mainmanage.py"])     #enters mainmanage page 
+                             quit()  
                  else:
                      if (mode== "3"):
                              con=mysql.connect(host= "localhost", user="root" , password="donotrootfarhad", database="bank_data")
@@ -58,7 +58,7 @@ class Appli(object):
                                  pchk=x[1]
                                  if (user == uchk and passw == pchk):
                                      MessageBox.showinfo("Sucessful", "Welcome Customer")
-                                     call(["python", "mainuser.py"])
+                                     call(["python", "mainuser.py"])    #enters mainusers page 
                                      quit()
 
 
@@ -92,14 +92,14 @@ class Appli(object):
      self.heading.place(x= 270, y=90)
 
      self.date_lbl = Label(self.bottom, text="Date : "+date, bg="#8e9b96")
-     self.date_lbl.place(x=500, y=20) 
+     self.date_lbl.place(x=500, y=20)   
 
      #Lable and Enteries
      self.user_lbl = Label(self.bottom, text="Username : ", bg="#8e9b96", font="Helvetica 15 bold")
      self.user_lbl.place(x=90, y=100)
 
      self.pass_lbl = Label(self.bottom, text="Password : ", bg="#8e9b96", font="helvetica 15 bold")
-     self.pass_lbl.place(x=90, y=180)
+     self.pass_lbl.place(x=90, y=180)  
 
      e_user= Entry(self.bottom, width= "40")
      e_user.place(x=240, y=105)

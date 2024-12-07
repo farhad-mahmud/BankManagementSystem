@@ -82,13 +82,13 @@ class Appli(object):
      self.bottom.pack(fill=X)
 
      #top Frame design
-     self.top_image=PhotoImage(file='icon/money.png')
-     self.top_image_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
-     self.top_image_lable.place(x=50, y=15)
+     #self.top_image=PhotoImage(file='icon/money.png')
+     #self.top_image_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
+     #self.top_image_lable.place(x=50, y=15)
 
-     self.top_image2=PhotoImage(file='icon/money.png')
-     self.top_image2_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
-     self.top_image2_lable.place(x=580, y=15)
+     #self.top_image2=PhotoImage(file='icon/money.png')
+      # self.top_image2_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
+     #self.top_image2_lable.place(x=580, y=15)
 
      self.heading= Label(self.top, text="Delete Account", font="helvetica 18 bold", bg="#f4f5f5")
      self.heading.place(x= 265, y=30)

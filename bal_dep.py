@@ -14,7 +14,7 @@ class Appli(object):
          acc_no= DoubleVar()
          acc_no = (e_acc_no.get())
          if (acc_no == "" ):
-             MessageBox.showinfo("ID is required for delete", "All Fields are Required")    
+             MessageBox.showinfo("ID is required for depositing", "All Fields are Required")    
          else:
              con=mysql.connect(host= "localhost", user="root" , password="donotrootfarhad", database="bank_data")
              cursor= con.cursor()
@@ -35,7 +35,7 @@ class Appli(object):
          acc_no= DoubleVar()
          acc_no = (e_acc_no.get())
          if (acc_no == "" ):
-             MessageBox.showinfo("ID is required for delete", "All Fields are Required")    
+             MessageBox.showinfo("ID is required for depositing", "All Fields are Required")    
          else:
              con=mysql.connect(host= "localhost", user="root" , password="donotrootfarhad", database="bank_data")
              cursor= con.cursor()
