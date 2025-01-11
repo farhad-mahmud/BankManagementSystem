@@ -4,7 +4,7 @@ import os
 from subprocess import call
 
 def create_acc():
-    call(["python", "create_acc.py"])        # calling the create account page and so on....
+    call(["python", "create_acc.py"])       
 def delt_acc():
     call(["python", "delt.py"])
 def balq():
@@ -15,6 +15,8 @@ def bw():
     call(["python", "bal_wd.py"])
 def bd():
     call(["python", "bal_dep.py"])
+def bd():
+    call(["python", "Fdr.py"])
 def upd():
     call(["python", "upd_acc.py"])        
 
@@ -27,7 +29,7 @@ class Appli(object):
   def __init__(self, master):
      self.master=master
 
-     #frames
+     
 
      self.top= Frame(master, height=100 , bg= "#f4f5f5")
      self.top.pack(fill=X)
@@ -35,7 +37,7 @@ class Appli(object):
      self.bottom= Frame(master, height=530, bg="#8e9b96")
      self.bottom.pack(fill=X)
 
-     #top Frame design
+     
      #self.top_image=PhotoImage(file='icon/money.png')
      #self.top_image_lable= Label(self.top, image=self.top_image, bg="white")
      #self.top_image_lable.place(x=70, y=15)
@@ -50,44 +52,44 @@ class Appli(object):
      self.date_lbl = Label(self.bottom, text="Date : "+date, bg="#8e9b96")
      self.date_lbl.place(x=500, y=20)
 
-     #buttons
+     
 
-     #Createacc
+     
      self.ca= Button(self.bottom, text=" Create Account ", font="helvetica 13 bold", command=create_acc, width=20)
      self.ca.place(x=40, y=50)
      self.ca_lbl = Label(self.bottom, text="> Create new user account", bg="#8e9b96", font="helvetica 13 bold")
      self.ca_lbl.place(x=280, y=52) 
 
-     #Balance enquiry
+     
      self.Be= Button(self.bottom, text=" Balance Enquiry ", font="helvetica 13 bold", command=balq, width=20)   # button widget 
      self.Be.place(x=40, y=120)                                      
      self.be_lbl = Label(self.bottom, text="> Check Account Balance", bg="#8e9b96", font="helvetica 13 bold") 
      self.be_lbl.place(x=280, y=122)       # self.be_lbl  .. label widget ,displays side text 
 
-     #Check Accounnt
+     
      self.Caa= Button(self.bottom, text=" Check Account Details ", font="helvetica 13 bold", command=chk, width=20)
      self.Caa.place(x=40, y=190)
      self.caa_lbl = Label(self.bottom, text="> Check account details", bg="#8e9b96", font="helvetica 13 bold")
      self.caa_lbl.place(x=280, y=192)
 
-     #Balance Withdraw
+     
      self.Bw= Button(self.bottom, text=" Balance Withdraw ", font="helvetica 13 bold", command=bw, width=20)
      self.Bw.place(x=40, y=260)
      self.bw_lbl = Label(self.bottom, text="> Withdraw Amount from user Account", bg="#8e9b96", font="helvetica 13 bold")
      self.bw_lbl.place(x=280, y=262)
 
-     #Balance Deposit
+     
      self.Bd= Button(self.bottom, text=" Balance Deposit ", font="helvetica 13 bold", command=bd, width=20)
      self.Bd.place(x=40, y=340)
      self.bd_lbl = Label(self.bottom, text="> Deposit Amount from user Account", bg="#8e9b96", font="helvetica 13 bold")
      self.bd_lbl.place(x=280, y=342)
 
-     #Delete Account
+     
      self.Au= Button(self.bottom, text=" Delete Account ", font="helvetica 13 bold", command=delt_acc, width=20)
      self.Au.place(x=40, y=410)
      self.bd_lbl = Label(self.bottom, text="> Delete user Account", bg="#8e9b96", font="helvetica 13 bold")
      self.bd_lbl.place(x=280, y=412)
-     #account update 
+      
      self.Au= Button(self.bottom, text=" Update Account ", font="helvetica 13 bold", command=upd, width=20)
      self.Au.place(x=40, y=480)
      self.bd_lbl = Label(self.bottom, text="> Update user Account", bg="#8e9b96", font="helvetica 13 bold")

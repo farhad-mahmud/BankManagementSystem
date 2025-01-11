@@ -3,13 +3,13 @@ import os
 import tkinter.messagebox as MessageBox
 from subprocess import call
 import mysql.connector as mysql
-import sys
+
 
 
 class Appli(object):
   def __init__(self, master):
      self.master=master
-     user = sys.argv[1] if len(sys.argv) > 1 else ""
+     
      def sub():
          acc_no= DoubleVar()
          acc_no = (e_acc_no.get())
@@ -93,9 +93,9 @@ class Appli(object):
      m_f_t.place(x=40, y=495)
 
      
-     userval = StringVar()
-     userval.set(user)  # Set the user value
-     e_acc_no= Entry(self.bottom, textvariable=userval, width="40", bg="yellow",state="disabled",font=("arial",11,"bold"),fg="black")
+     
+     
+     e_acc_no= Entry(self.bottom, width="60")
      e_acc_no.place(x=320, y=55)
 
      e_fname= Entry(self.bottom, width= "40")
@@ -128,7 +128,7 @@ class Appli(object):
      
 
      
-     self.submit= Button(self.bottom, text=" View Info ", font="helvetica 15 bold", width="10", command=sub)
+     self.submit= Button(self.bottom, text=" Submit ", font="helvetica 15 bold", width="10", command=sub)
      self.submit.place(x=600 , y=85)
 
      self.qt= Button(self.bottom, text=" Quit", font="helvetica 15 bold", width="10", command=quit)

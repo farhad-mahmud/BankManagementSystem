@@ -2,12 +2,11 @@ from tkinter import *
 import os
 import tkinter.messagebox as MessageBox
 import mysql.connector as mysql
-import sys
+
 
 class Appli(object):
   def __init__(self, master):
      self.master=master
-     user = sys.argv[1] if len(sys.argv) > 1 else ""
      def go_back():
          self.master.destroy()
      def sub():
@@ -62,19 +61,18 @@ class Appli(object):
      Label(self.bottom, text="Details -> ", font="helvetica 14 bold", bg="#8e9b96").place(x=40, y=110)
 
      
-     userval = StringVar()
-     userval.set(user)  # Set the user value
-     e_acc_no= Entry(self.bottom, textvariable=userval, width="30", bg="yellow",state="disabled",font=("arial",15,"bold"),fg="black")
+     
+     e_acc_no= Entry(self.bottom,  width="60",)
      e_acc_no.place(x=320, y=55)
 
      lb= Entry(self.bottom, width="60" )
      lb.place(x=320 , y= 110)
-
+    
      
-     self.submit= Button(self.bottom, text=" Submit ", font="helvetica 15 bold", width="52", command=sub)
+     self.submit= Button(self.bottom, text=" Submit ",bg = "light blue", font="helvetica 15 bold", width="52", command=sub)
      self.submit.place(x=45 , y=180)
-     self.back_btn = Button(self.bottom, text="Back", font="helvetica 15 bold", width="20", command=go_back)
-     self.back_btn.place(x=45, y=240)
+     self.back_btn = Button(self.bottom, text="Back",bg= "red" ,font="helvetica 15 bold", width="20", command=go_back)
+     self.back_btn.place(x=45, y=230)
 
 def main():
     root = Tk()

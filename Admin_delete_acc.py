@@ -9,6 +9,8 @@ import mysql.connector as mysql
 class Appli(object):
   def __init__(self, master):
      self.master=master
+     def go_back():
+         self.master.destroy()
      def delti():
          acc_no= DoubleVar()
          acc_no = (e_acc_no.get())
@@ -73,7 +75,7 @@ class Appli(object):
              
 
 
-     #frames
+     
 
      self.top= Frame(master, height=100 , bg= "#f4f5f5")
      self.top.pack(fill=X)
@@ -81,7 +83,7 @@ class Appli(object):
      self.bottom= Frame(master, height=800, bg="#8e9b96")
      self.bottom.pack(fill=X)
 
-     #top Frame design
+     
      #self.top_image=PhotoImage(file='icon/money.png')
      #self.top_image_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
      #self.top_image_lable.place(x=50, y=15)
@@ -93,9 +95,9 @@ class Appli(object):
      self.heading= Label(self.top, text="Delete Account", font="helvetica 18 bold", bg="#f4f5f5")
      self.heading.place(x= 265, y=30)
 
-     #bottom Frame Design
+     
 
-     #buttons and lables
+     
      acc_no= DoubleVar()
      acc_no = Label(self.bottom, text="Account number ", font="helvetica 14 bold", bg="#8e9b96")
      acc_no.place(x=40, y=55)
@@ -103,25 +105,27 @@ class Appli(object):
      detail = Label(self.bottom, text="Details -> ", font="helvetica 14 bold", bg="#8e9b96")
      detail.place(x=40, y=110)
 
-     #Enteries
+    
      
      e_acc_no= Entry(self.bottom, width= "60", textvariable=acc_no)
      e_acc_no.place(x=320, y=55)
 
 
-     #list
+     
      lb= Listbox(self.bottom,height="50", width="60" )
      lb.place(x=320 , y= 110)
 
 
 
-     #submit
+     
      self.submit= Button(self.bottom, text=" Submit ", font="helvetica 15 bold", width="20", command=sub)
      self.submit.place(x=45 , y=200)
 
      self.delt= Button(self.bottom, text=" Delete ", font="helvetica 15 bold", width="20", command=delti)
-     self.delt.place(x=45 , y=300)
-     
+     self.delt.place(x=45 , y=270)
+
+     self.back_btn = Button(self.bottom, text="Back",bg= "red" ,font="helvetica 15 bold", width="20", command=go_back)
+     self.back_btn.place(x=45, y=330)
 
 def main():
     root = Tk()

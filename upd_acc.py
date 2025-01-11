@@ -9,7 +9,8 @@ import mysql.connector as mysql
 class Appli(object):
   def __init__(self, master):
      self.master=master
-
+     def go_back():
+         self.master.destroy()
      def sub():
          acc_no= DoubleVar()
          acc_no = (e_acc_no.get())
@@ -28,7 +29,7 @@ class Appli(object):
              
 
 
-     #frames
+     
 
      self.top= Frame(master, height=100 , bg= "#f4f5f5")
      self.top.pack(fill=X)
@@ -36,7 +37,7 @@ class Appli(object):
      self.bottom= Frame(master, height=900, bg="#8e9b96")
      self.bottom.pack(fill=X)
 
-     #top Frame design
+     
      #self.top_image=PhotoImage(file='icon/money.png')
      #self.top_image_lable= Label(self.top, image=self.top_image, bg="#f4f5f5")
      #self.top_image_lable.place(x=50, y=15)
@@ -48,9 +49,9 @@ class Appli(object):
      self.heading= Label(self.top, text="Check Account Details", font="helvetica 18 bold", bg="#f4f5f5")
      self.heading.place(x= 255, y=30)
 
-     #bottom Frame Design
+     
 
-     #buttons and lables
+     
      acc_no= DoubleVar()
      acc_no = Label(self.bottom, text="Account number ", font="helvetica 14 bold", bg="#8e9b96")
      acc_no.place(x=40, y=40)
@@ -75,13 +76,13 @@ class Appli(object):
      phone_no = Label(self.bottom, text="Phone Number ", font="helvetica 14 bold", bg="#8e9b96")
      phone_no.place(x=40, y=370)
 
-     m_f_t = Label(self.bottom, text="Sex ", font="helvetica 14 bold", bg="#8e9b96")
+     m_f_t = Label(self.bottom, text="Gender ", font="helvetica 14 bold", bg="#8e9b96")
      m_f_t.place(x=40, y=425)
 
      d_ob= Label(self.bottom, text="Date of Birth", font="helvetica 14 bold", bg="#8e9b96")
      d_ob.place(x=40,y=475)
 
-     #Enteries
+     
      
      e_acc_no= Entry(self.bottom, width= "40")
      e_acc_no.place(x=320, y=40)
@@ -112,10 +113,10 @@ class Appli(object):
 
      
 
-     #Enteries
+     
      
 
-     #submit
+     
      self.submit= Button(self.bottom, text=" Submit ", font="helvetica 15 bold", width="10", command=sub)
      self.submit.place(x=600 , y=55)
 
