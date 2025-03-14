@@ -1,2 +1,2 @@
 # BankManagementSystem
-This is a software development project under my bachelor's program in CSE
+A complete Bank management System project with customer and admin panel using python|tkinter|SQL.
